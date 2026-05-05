@@ -27,7 +27,7 @@ void clear_screen() {
     }
 }
 
-void draw_block(int x, int y, unsigned char color_code) {
+void draw_block(int x, int y, uint8_t color_code) {
 	volatile unsigned short* vga_buffer = (volatile unsigned short*)0xB8000;
 	int index = y * 80 + x;
 	vga_buffer[index] = (unsigned short)((color_code << 4) | color_code) << 8 | ' ';

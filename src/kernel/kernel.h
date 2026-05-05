@@ -8,7 +8,8 @@ typedef uint32_t size_t;
 
 size_t strlen(const char *str);
 int strcmp(const char* s1, const char* s2);
-void *memeset(void *b, int c, size_t len);
+void *memset(void *b, int c, size_t len);
 
+void draw_block(int x, int y, uint8_t color_code);
 void clear_screen();
 #endif
