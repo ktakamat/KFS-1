@@ -1,0 +1,14 @@
+#ifndef KERNEL_H
+#define KERNEL_H
+
+typedef unsigned char uint8_t;
+typedef unsigned short uint16_t;
+typedef unsigned int uint32_t;
+typedef uint32_t size_t;
+
+size_t strlen(const char *str);
+int strcmp(const char* s1, const char* s2);
+void *memeset(void *b, int c, size_t len);
+
+void clear_screen();
+#endif
