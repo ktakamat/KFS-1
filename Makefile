@@ -1,6 +1,6 @@
-CC = gcc
-AS = gcc
-LD = ld
+CC = i686-linux-gnu-gcc
+AS = i686-linux-gnu-gcc
+LD = i686-linux-gnu-ld
 
 CFLAGS = -m32 -nostdlib -fno-builtin -fno-exceptions -fno-stack-protector -fno-rtti -nodefaultlibs -ffreestanding -Wall -Wextra
 ASFLAGS = -m32
@@ -37,5 +37,5 @@ fclean: clean
 
 re: fclean all
 
-run: $(ISO)
-	qemu-system-i386 -cdrom $(ISO)
+run: $(BIN)
+	qemu-system-i386 -kernel images/kernel.bin
