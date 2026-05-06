@@ -7,7 +7,7 @@ CFLAGS = -m32 -nostdlib -fno-builtin -fno-stack-protector \
 ASFLAGS = -m32
 LDFLAGS = -m elf_i386 -T src/linker.ld
 
-OBJS = src/boot/boot.o src/kernel/main.o src/kernel/tool.o
+OBJS = src/boot/boot.o src/kernel/main.o src/kernel/tool.o src/kernel/bonus.o
 INC = src/kernel/kernel.h
 BIN = images/kernel.bin
 ISO = images/kfs.iso
