@@ -37,10 +37,14 @@ $(ISO): $(BIN)
 	grub-mkrescue -o $(ISO) isodir
 	# rm -rf isodir
 clean:
-	rm -f $(OBJS) $(BIN)
+	rm -f $(OBJS)
+	rm -rf isodir
+	rm -rf debug_isodir
 
 fclean: clean
+	rm -f $(BIN)
 	rm -f $(ISO)
+	rm -rf images
 
 re: fclean all
 

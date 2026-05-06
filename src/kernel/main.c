@@ -23,7 +23,7 @@
 
 void kernel_main(void) {
     clear_screen();
-    
+
     uint8_t color = 0x0B;
-    put_str(39, 12, "42", color);
+    put_str(0, 0, "42", color);
 }
