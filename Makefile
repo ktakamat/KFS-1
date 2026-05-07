@@ -44,5 +44,11 @@ fclean: clean
 
 re: fclean all
 
-run: $(ISO)
-	qemu-system-i386 -boot d -cdrom images/kfs.iso
+# run: $(ISO)
+# 	qemu-system-i386 -boot d -cdrom images/kfs.iso
+
+run: $(BIN)
+	qemu-system-i386 -kernel $(BIN)
+
+run-iso: $(ISO)
+	qemu-system-i386 -boot d -cdrom $(ISO)

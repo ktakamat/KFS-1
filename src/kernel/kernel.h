@@ -6,10 +6,12 @@ typedef unsigned short uint16_t;
 typedef unsigned int uint32_t;
 typedef uint32_t size_t;
 
-size_t strlen(const char *str);
-int strcmp(const char* s1, const char* s2);
-void *memset(void *b, int c, size_t len);
+// size_t strlen(const char *str);
+// int strcmp(const char* s1, const char* s2);
+// void *memset(void *b, int c, size_t len);
+void put_char(int x, int y, char c, uint8_t color);
+void put_str(int x, int y, const char *str, uint8_t color);
 
-void draw_block(int x, int y, uint8_t color_code);
+// void draw_block(int x, int y, uint8_t color_code);
 void clear_screen();
 #endif
