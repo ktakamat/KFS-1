@@ -23,7 +23,28 @@
 
 void kernel_main(void) {
     clear_screen();
-
+    // mandatory
     uint8_t color = 0x0B;
     put_str(0, 0, "42", color);
+    
+    // Bonus
+    kset_color(0x0B); 
+    kprint("42\n"); 
+
+    kset_color(0x0E); // 黄色
+    kprint("--- KFS_1 Bonus Demo ---\n");
+    
+    kset_color(0x0F); // 白
+    kprint("Cursor is moving: OK\n");
+    
+    kprint("Testing hex output: ");
+    kprint_hex(0xDEADBEEF);
+    kputchar('\n');
+    
+    kprint("Testing scroll:\n");
+    for(int i = 0; i < 30; i++) {
+        kprint("Line ");
+        kprint_int(i);
+        kputchar('\n');
+    }
 }

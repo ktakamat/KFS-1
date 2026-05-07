@@ -14,4 +14,12 @@ void put_str(int x, int y, const char *str, uint8_t color);
 
 // void draw_block(int x, int y, uint8_t color_code);
 void clear_screen();
+
+void kputchar(char c);
+void kprint(const char* str);
+void kset_color(uint8_t color);
+void update_cursor();
+void kprint_int(int n);
+void kprint_hex(uint32_t n);
+void printk(const char *format, ...);
 #endif
